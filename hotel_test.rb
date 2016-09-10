@@ -25,5 +25,10 @@ describe '#hotel' do
       expect(hotel_name).to eq('Lakewood')
     end
 
+    it 'Returns the cheapest hotel for one date on weekend' do
+      hotel_name = hotel.search_cheapest('reward', '18-Mar-2017')
+      expect(hotel_name).to eq('Ridgewood')
+    end
+
   end
 end

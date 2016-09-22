@@ -2,9 +2,9 @@ require 'Rspec'
 require_relative 'hotel'
 
 describe '#hotel' do
+  let (:hotel) {Hotel.new}
 
   context 'Regular customer' do
-    let(:hotel) { Hotel.new }
 
     it 'Returns the cheapest hotel for one date on weekday' do
       hotel_name = hotel.search_cheapest('regular', '16-Mar-2017')
